@@ -1,56 +1,39 @@
-# Quieres.html
-# Quieres-ser-mi-Novia-
 <!DOCTYPE html>
-<html lang="es">
-
+<html>
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>♥ qUIERES sER mI nOVIa ♥</title>
-  <style>
-    .body {
-      background-color: crimson;
-      text-align: center;
-    }
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Nobia</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <style>
+        body {
+            background-color: pink;
+        }
+    </style>
+    <script>
+        function accionParaCuandoEllaDigaQueSi(){
+            alert('ahora ya somos nobios <3');
+        }
 
-    .body__title {
-      color: white;
-    }
+        function mueveElBoton(){
+            width = window.innerWidth;
+            height = window.innerHeight;
 
-    .body__img {
-      width: 100%;
-      max-width: 512px;
-      border-radius: 50%;
-    }
-  </style>
+            newWidth = (Math.random() * width);
+            newHeight = (Math.random() * height);
+
+            document.getElementById('btnNo').style.position = "absolute";
+            document.getElementById('btnNo').style.left = newWidth + "px";
+            document.getElementById('btnNo').style.top = newHeight + "px";
+            
+
+        }
+    </script>
 </head>
-
-<body class="body">
-  <h1 class="body__title">♥ Quieres Ser mi Novia ♥</h1>
-  <img src="https://frikimaestro.com/wp-content/uploads/2019/10/0005-3.jpg" alt="Foto D My" class="body__img" />
-  <br>
-  <button id="yes">🌚Si🌚</button>
-  <button id="no">😭No😭</button>
-
-  <script>
-    const vuttonSi = document.getElementById('yes');
-    const vuttonNo = document.getElementById('no');
-
-    const zomosNobios = () => {
-      alert('💞Haora somos novios beivi💞');
-      alert('😱Soy gay😱');
-      location.href = 'https://youtu.be/am1_JLFDFMw?t=19';
-    };
-
-    const ebitarKCRompaMyBobo = () => {
-      vuttonNo.style.position = 'absolute';
-      vuttonNo.style.top = (Math.random() * window.innerHeight + 'px');
-      vuttonNo.style.left = (Math.random() * window.innerWidth + 'px');
-    };
-
-    vuttonSi.addEventListener('click', zomosNobios);
-    vuttonNo.addEventListener('mouseover', ebitarKCRompaMyBobo);
-  </script>
+<body>
+    <h3>Quieres ser mi nobia?</h3>
+    <input type="button" onclick="accionParaCuandoEllaDigaQueSi()" id="btnSi" value="Si" />
+    <input type="button" id="btnNo" onmouseover="mueveElBoton()" value="No" />
+    <img src="chuec.png" width="200">
 </body>
-
 </html>
